@@ -32,5 +32,41 @@
     </tr>
     </tbody>
 </table>
+<ul>
+
+    <div class="container">
+        <div class="">
+            <h4 class="text-center">List Sale</h4>
+            <table class="table" style="height: 500px;">
+                <thead class="table-info">
+                <tr  class="text-center">
+                    <th scope="col">Mã</th>
+                    <th scope="col">SalesMan ID</th>
+                    <th scope="col" style="width: 10%">Product ID</th>
+                    <th scope="col">SalesMan Name</th>
+                    <th scope="col">Date Of Sale</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="st1: ${listSale}" class="contentPage">
+                    <td scope="col" style="text-align: center" th:text="${st1.sINo}">
+                    </td>
+                    <td scope="col" style="text-align: center" th:text="${st1.salesmanId}">
+                    </td>
+                    <td scope="col" style="text-align: center" th:text="${st1.product.prodID}">
+                    </td>
+                    <td scope="col" style="text-align: center" th:text="${st1.salesmanName}">
+                    </td>
+                    <td scope="col" style="text-align: center" th:text="${st1.DOS}">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ul>
 </body>
 </html>
